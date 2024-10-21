@@ -1,0 +1,24 @@
+Document Root
+/var/www/html
+
+File Configuration Apache2
+/etc/apache2/sites-available/
+
+SSL Location
+/etc/ssl/
+
+Restart service
+sudo systemctl restart apache2
+
+Configuration SSL Apache2
+		SSLCertificateFile	/etc/ssl/certificate.crt
+		SSLCertificateKeyFile /etc/ssl/private.key
+		SSLCertificateChainFile /etc/ssl/ca_bundle.crt
+		
+Aktifkan modul SSL
+sudo a2enmod ssl
+
+Aktifkan situs untuk SSL
+sudo a2ensite default-ssl.conf
+
+Zer00Day
